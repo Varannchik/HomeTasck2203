@@ -150,8 +150,16 @@ input {
   background: url("img/Слой 2 копия.jpg")no-repeat center;
   background-size: cover;
   height: 100vh;
-}
 
+}
+.content{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr 2fr;
+  grid-gap: 1em;
+  padding: 3em 2em;
+
+}
 .menu{
   width: 135px;
   background: #1D2024;
@@ -197,7 +205,7 @@ input {
         filter: drop-shadow(0 0 20px rgba(250,194,19,0.7));
         opacity: inherit;
         fill: rgba(250,194,19,0.7);
-        //stroke: rgba(250,194,19,0.7);
+        stroke: rgba(250,194,19,0.7);
 
       }
     }
@@ -210,14 +218,14 @@ input {
 .tabs {
   min-width: 320px;
   max-width: 946px;
-  padding: 0px;
   margin: 0 auto;
-
   border: 1px solid @gray;
   background: linear-gradient(180deg, rgba(29, 32, 36, 0.6) 45.23%, rgba(29, 32, 36, 0) 100%);
   mix-blend-mode: normal;
   backdrop-filter: blur(20px);/* Note: backdrop-filter has minimal browser support */
   border-radius: 3px;
+  font-size: 14px;
+  color: white;
 }
 /* Стили секций с содержанием */
 .tabs>section {
@@ -226,18 +234,7 @@ input {
 
 
 }
-.tabs>section>p {
-  margin: 0 0 5px;
-  line-height: 1.5;
-  color: #383838;
-  /* прикрутим анимацию */
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
+
 /* Описываем анимацию свойства opacity */
 
 @-webkit-keyframes fadeIn {
@@ -266,18 +263,16 @@ input {
   display: inline-block;
   margin: 0 0 -1px;
   padding: 15px 25px;
-  font-weight: 600;
   text-align: center;
-  color: #aaa;
+  font-size: 14px;
+  font-weight: bold;
+  color:#797A7C;
+  border-bottom: 2px solid #2A2B31;
 
 
 }
-/* Шрифт-иконки от Font Awesome в формате Unicode */
-.tabs>label:before {
 
-  font-weight: normal;
-  margin-right: 10px;
-}
+
 
 /* Изменения стиля переключателей вкладок при наведении */
 
@@ -289,7 +284,7 @@ input {
 .tabs>input:checked+label {
   color: #555;
 
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid @dark_yellow;
 
 }
 /* Активация секций с помощью псевдокласса :checked */
@@ -297,7 +292,28 @@ input {
   display: block;
 }
 
+.card_block{
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr;
+  grid-gap: 1em;
+}
+.card{
+  position: relative;
+  background: #1B1D21;
+  padding: 10px 30px;
+  border: 1px solid @gray;
+  border-radius: 3px;
+  
+  &:hover{
+    .bg_card{
+      display: block;
+    }
+  }
+}
 
-
-
-
+.bg_card{
+  position: absolute;
+  display: none;
+  top: -10px;
+  left: -30px;
+}

@@ -144,24 +144,25 @@ input {
 
 
 .main{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 30fr 5fr;
   background: url("img/Слой 2 копия.jpg")no-repeat center;
   background-size: cover;
-  height: 100vh;
+  //height: 100vh;
 
 }
 .content{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 2fr 2fr;
   grid-gap: 1em;
-  padding: 3em 2em;
+  padding: 3em 1em 3em 2em;
 
 }
 .menu{
   width: 135px;
   background: #1D2024;
-  height: 100vh;
+  //height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,8 +217,7 @@ input {
 
 /* Базовый контейнер табов */
 .tabs {
-  min-width: 320px;
-  max-width: 946px;
+  width: 100%;
   margin: 0 auto;
   border: 1px Solid   #2A2B31;
   background: linear-gradient(180deg, rgba(29, 32, 36, 0.6) 45.23%, rgba(29, 32, 36, 0) 100%);
@@ -397,7 +397,7 @@ form{
     &:before{
        content: '';
        position: absolute;
-       left: 30;
+       left: 3px;
        top: 1px;
        border-left:2px solid @dark_yellow;
        height: 49px;
@@ -405,7 +405,7 @@ form{
     &:after{
       content: '';
       position: absolute;
-      right: 0px;
+      right: 3px;
       top: 1px;
       border-left:2px solid @dark_yellow;
       height: 49px;
@@ -436,6 +436,26 @@ form{
   padding: 10px 15px;
   border: 1px Solid   #2A2B31;
   border-radius: 3px;
+}
+.profil{
+  border: 1px Solid   #2A2B31;
+  background: linear-gradient(180deg, rgba(29, 32, 36, 0.6) 45.23%, rgba(29, 32, 36, 0) 100%);
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  .border_gradient{
+    margin: 0;
+  }
+
+  p{
+    padding: 15px 0;
+  }
+
+}
+.icon_profil{
+  padding: 10px;
+  background:#2A2B31;
 }
 
 

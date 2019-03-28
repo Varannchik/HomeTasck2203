@@ -228,12 +228,16 @@ input {
   color: white;
 }
 /* Стили секций с содержанием */
-.tabs>section {
-  display: none;
-  padding: 15px;
-  font-weight: bold;
+.tabs {
+  section {
+       display: none;
+       padding: 15px;
+       font-weight: bold;
 
-
+}
+  .with_pad{
+    padding: 0 0;
+  }
 }
 
 /* Описываем анимацию свойства opacity */
@@ -444,6 +448,7 @@ form{
   color: white;
   font-weight: bold;
   text-align: center;
+  border-radius: 3px;
   .border_gradient{
     margin: 0;
   }
@@ -458,5 +463,59 @@ form{
   background:#2A2B31;
 }
 
+table{
+  width: 100%;
+  text-align: center;
+  background: rgba(29, 32, 36, 0.8);
+  padding: 10px 0;
+  border-collapse: collapse;
+  line-height: 46px;
+
+  .border_gradient{
+
+    margin: 0;
+
+  }
+  tr{
+    td{
+      padding: 0 20px;
+
+      img, svg{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+
+      &:first-child{
+        text-align: left;
+        max-width: 10px;
+        padding: 0 0 0 20px;
+
+      }
+      &:nth-child(2){
+        text-align: left;
+      }
+    }
+    &:last-child{
+      td{
+        text-align: center;
+      }
+
+      color: #4A4C4F;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+  }
+
+}
+
+tr:nth-child(2n) {
+  background: rgba(42, 43, 49, 0.8);
+}
+tr:nth-child(2){
+  background: rgba(29, 32, 36, 0.8);
+
+}
 
 

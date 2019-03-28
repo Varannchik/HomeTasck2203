@@ -186,10 +186,13 @@ input {
   color: white;
 }
 /* Стили секций с содержанием */
-.tabs > section {
+.tabs section {
   display: none;
   padding: 15px;
   font-weight: bold;
+}
+.tabs .with_pad {
+  padding: 0 0;
 }
 /* Описываем анимацию свойства opacity */
 @-webkit-keyframes fadeIn {
@@ -386,6 +389,7 @@ form button {
   color: white;
   font-weight: bold;
   text-align: center;
+  border-radius: 3px;
 }
 .profil .border_gradient {
   margin: 0;
@@ -396,4 +400,46 @@ form button {
 .icon_profil {
   padding: 10px;
   background: #2A2B31;
+}
+table {
+  width: 100%;
+  text-align: center;
+  background: rgba(29, 32, 36, 0.8);
+  padding: 10px 0;
+  border-collapse: collapse;
+  line-height: 46px;
+}
+table .border_gradient {
+  margin: 0;
+}
+table tr td {
+  padding: 0 20px;
+}
+table tr td img,
+table tr td svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+table tr td:first-child {
+  text-align: left;
+  max-width: 10px;
+  padding: 0 0 0 20px;
+}
+table tr td:nth-child(2) {
+  text-align: left;
+}
+table tr:last-child {
+  color: #4A4C4F;
+  font-size: 12px;
+  font-weight: bold;
+}
+table tr:last-child td {
+  text-align: center;
+}
+tr:nth-child(2n) {
+  background: rgba(42, 43, 49, 0.8);
+}
+tr:nth-child(2) {
+  background: rgba(29, 32, 36, 0.8);
 }

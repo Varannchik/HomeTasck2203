@@ -339,19 +339,27 @@ form {
   align-items: center;
   gap: 1em;
 }
-form input {
-  margin: 0 10px;
+form .input_wrap {
   position: relative;
 }
-form input:before,
-form input:after {
+form .input_wrap:before {
   content: '';
-  height: auto;
-  width: 2px;
-  background: #F4AC26;
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 3px;
+  top: 1px;
+  border-left: 2px solid #F4AC26;
+  height: 49px;
+}
+form .input_wrap:after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  border-left: 2px solid #F4AC26;
+  height: 49px;
+}
+form input {
+  margin: 0 20px;
 }
 form input:hover {
   border: 1px Solid #F4AC26;

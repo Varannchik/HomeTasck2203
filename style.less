@@ -392,18 +392,29 @@ form{
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 1em;
-  input{
-    margin: 0 10px;
+  .input_wrap{
     position: relative;
-    &:before, &:after{
+    &:before{
+       content: '';
+       position: absolute;
+       left: 3px;
+       top: 1px;
+       border-left:2px solid @dark_yellow;
+       height: 49px;
+     }
+    &:after{
       content: '';
-      height: auto;
-      width: 2px;
-      background: @dark_yellow;
       position: absolute;
-      top: 0;
-      left: 0;
+      right: 3px;
+      top: 1px;
+      border-left:2px solid @dark_yellow;
+      height: 49px;
     }
+  }
+  input{
+    margin: 0 20px;
+
+
     &:hover{
       border: 1px Solid   @dark_yellow;
     }

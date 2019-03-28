@@ -18,9 +18,7 @@ header {
   background: linear-gradient(90deg, #1D2024 0%, #18191D 100%);
   padding: 16px 0 16px 10px;
   flex: 4   1   1000px;
-  border: 1px solid;
-  border-image: linear-gradient(90deg, #717278 0%, #2A2B31 100%);
-  border-image-slice: 1;
+  border: 1px Solid #2A2B31;
 }
 .logo {
   display: flex;
@@ -63,10 +61,9 @@ input {
   line-height: normal;
   color: #717278;
   border-radius: 3px;
-  border: 1px solid #717278;
+  border: 1px Solid #2A2B31;
   background: #1D2024;
   outline: none;
-  width: 380px;
 }
 .count_player {
   display: flex;
@@ -95,7 +92,7 @@ input {
   flex: 2   1   100px;
   padding: 0 10px 0 0;
 }
-.account_info:hover svg {
+.account_info:hover img {
   -webkit-filter: drop-shadow(0 0 3px rgba(250, 194, 19, 0.7));
   filter: drop-shadow(0 0 3px rgba(250, 194, 19, 0.7));
 }
@@ -182,7 +179,7 @@ input {
   min-width: 320px;
   max-width: 946px;
   margin: 0 auto;
-  border: 1px solid #717278;
+  border: 1px Solid #2A2B31;
   background: linear-gradient(180deg, rgba(29, 32, 36, 0.6) 45.23%, rgba(29, 32, 36, 0) 100%);
   mix-blend-mode: normal;
   backdrop-filter: blur(20px);
@@ -261,7 +258,7 @@ input {
   position: relative;
   background: #1B1D21;
   padding: 10px 15px;
-  border: 1px solid #717278;
+  border: 1px Solid #2A2B31;
   border-radius: 3px;
 }
 .card:hover {
@@ -316,22 +313,57 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 30px;
+  gap: 1em;
 }
 .count {
   gap: 1em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
 }
 .count a {
   color: white;
   text-decoration: none;
   background: #1B1D21;
-  padding: 24px;
+  padding: 14px 0;
   border: 1px Solid #2A2B31;
   border-radius: 3px;
   text-align: center;
 }
+.count a:hover {
+  border: 1px Solid #F4AC26;
+}
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1em;
+}
+form input {
+  margin: 0 10px;
+  position: relative;
+}
+form input:before,
+form input:after {
+  content: '';
+  height: auto;
+  width: 2px;
+  background: #F4AC26;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+form input:hover {
+  border: 1px Solid #F4AC26;
+}
+form button {
+  background: linear-gradient(0deg, #FDCB0C -38.68%, #F4AC26 100%);
+  outline: none;
+  color: #1C1E23;
+  border: none;
+  line-height: 47px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 14px;
 }

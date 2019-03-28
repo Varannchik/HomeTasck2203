@@ -345,7 +345,7 @@ form .input_wrap {
 form .input_wrap:before {
   content: '';
   position: absolute;
-  left: 3px;
+  left: 30;
   top: 1px;
   border-left: 2px solid #F4AC26;
   height: 49px;
@@ -353,7 +353,7 @@ form .input_wrap:before {
 form .input_wrap:after {
   content: '';
   position: absolute;
-  right: 3px;
+  right: 0px;
   top: 1px;
   border-left: 2px solid #F4AC26;
   height: 49px;
@@ -374,4 +374,10 @@ form button {
   border-radius: 3px;
   font-weight: bold;
   font-size: 14px;
+}
+.rigt_content {
+  background: #1B1D21;
+  padding: 10px 15px;
+  border: 1px Solid #2A2B31;
+  border-radius: 3px;
 }

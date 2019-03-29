@@ -267,7 +267,7 @@ input {
 .tabs>label {
   display: inline-block;
   margin: 0 0 -1px;
-  padding: 15px 24px;
+  padding: 15px 22px;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
@@ -322,6 +322,7 @@ input {
     p{
       color: white;
     }
+
   }
   p{
     font-size: 12px;
@@ -343,6 +344,11 @@ input {
   display: flex;
   align-items: center;
 }
+.icon_card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .border_gradient{
   width: 100%;
   height: 1px;
@@ -356,7 +362,7 @@ input {
 }
 
 .stavka{
-  padding: 15px;
+  padding: 24px 15px;
   background: rgba(29, 32, 36, 0.6);
   mix-blend-mode: normal;
   border: 1px solid #2A2B31;
@@ -438,6 +444,8 @@ form{
 .rigt_content{
 
   padding: 3em 1em 0 0 ;
+  //height: 100vh;
+  //overflow-y: scroll;
 
 
 
@@ -450,6 +458,7 @@ form{
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
+  position: relative;
   .border_gradient{
     margin: 0;
   }
@@ -524,14 +533,21 @@ tr:nth-child(2){
   display: flex;
   justify-content: space-between;
   padding:  1em;
-  background: url("img/bg3.png") no-repeat right;
+
   font-size: 14px;
   font-weight: bold;
   color: #fff;
   text-align: center;
   border: 1px Solid   #2A2B31;
-  border-radius: 3px;
+
   margin-bottom: 15px;
+  &:nth-child(2n){
+    background: url("img/bg4.png") no-repeat right;
+  }
+  &:nth-child(2n+1){
+    background: url("img/bg3.png") no-repeat right;
+  }
+
   .bg{
     position: absolute;
     width: 100%;
@@ -539,12 +555,20 @@ tr:nth-child(2){
     top: 0;
     background: linear-gradient(to right, rgba(29, 32, 36, 0.6) 45.23%, rgba(29, 32, 36, 0) 100%);
     right: 0;
+    border-radius: 3px;
 
   }
+
   &:hover{
     .bg{
       background-image: url("img/bg_item_hover.png");
       border: 1px solid @dark_yellow;
+    }
+   svg{
+
+      -webkit-filter: drop-shadow(0 0 3px rgba(250,194,19,0.7));
+      filter: drop-shadow(0 0 3px rgba(250,194,19,0.7));
+
     }
 
   }
@@ -559,6 +583,7 @@ tr:nth-child(2){
     align-items: center;
     justify-content: center;
     z-index: 1;
+    padding: 0 10px;
   }
   .player{
     z-index: 1;
@@ -570,9 +595,102 @@ tr:nth-child(2){
   h6{
     font-size: 22px;
   }
-  
-
 
 }
+.f12{
+  font-size: 12px;
+  font-weight: normal;
+}
+h3{
+  font-size: 28px;
+  font-weight: bold;
+}
+h4{
+  color: #EB5757;
+  font-size: 18px;
+  font-weight: bold;
+}
+.fNormal{
+  font-weight: normal;
+  span{
+    color: @yellow;
+    font-weight: bold;
+ }
+}
+h2{
+  font-size: 20px;
+}
+.description{
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 5px;
+  span{
+    font-weight: bold;
+  }
+  .rank_des{
+    display: flex;
+    align-items: center;
+  }
+}
+.icon_profil{
+  display: flex;
+  align-items: flex-start;
+}
+.b12{
+  font-size: 12px;
+  font-weight: bold;
+}
+.reit{
+  padding: 0 10px;
+  p{
+    text-align: left;
+  }
+}
+.reit_player_status{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
+}
+.reit_item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 12px;
+  min-width: 41%;
+  p{
+    padding: 5px 0;
+    &:first-child{
+      font-weight: normal;
+      opacity: 0.54;
+    }
+    &:last-child{
+      opacity: 1;
+    }
+  }
+
+}
+.copleted{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bg_profil{
+ z-index: 1;
+  img{
+    z-index: 1;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.bg_axe{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: url("img/bg_Axe.png") no-repeat center;
+  right: 0;
+  z-index: -1;
+}
 
